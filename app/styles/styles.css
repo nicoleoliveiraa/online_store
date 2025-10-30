@@ -1,9 +1,9 @@
-.text-general {
-  font-family: 'Inter', sans-serif;
+.text-inter {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0;
-  color: #1F3044
+  color: #1f3044;
 }

@@ -6,6 +6,7 @@ import {
 } from "@remix-run/react";
 import stylesUrl from "./styles/tailwind.css";
 import Header from "./components/Header";
+import { StoreProvider } from "./context/StoreContext";
 
 export function links() {
   return [{ rel: "stylesheet", href: stylesUrl }];
@@ -27,8 +28,12 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <StoreProvider>
         <Header />
-        <Outlet />
+        <main className="pt-16">
+          <Outlet />
+        </main>
+        </StoreProvider>
 
         <Scripts />
       </body>

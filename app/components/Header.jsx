@@ -5,7 +5,8 @@ export default function Header(){
 	const links = ["Home", "Shop", "About", "Contact", "Blog"];
 
 	return(
-		<header className="h-16 flex justify-between items-center border-b border-black px-[24px]">
+		<header className="fixed top-0 left-0 w-full h-16 flex justify-between items-center 
+			border-b border-black border-opacity-50 px-[24px] bg-white z-50">
 			<h1 className="text-header text-[#1F3044] font-bebas">
 				THE ONLINE STORE
 			</h1>
