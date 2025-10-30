@@ -7,6 +7,8 @@ export default {
       fontFamily: {
         bebas: ['"Bebas Neue"', 'cursive'],
         inter: ['Inter', 'sans-serif'],
+        ubuntu: ['"Ubuntu"', 'sans-serif'],
+        robotoMono: ['"Roboto Mono"', 'sans-serif'],
       },
     },
   },
