@@ -9,7 +9,7 @@ export default function ProductDetails({ product }) {
   const image = product.thumbnail;
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-[20px] min-h-screen md:gap-[48px] p-[24px] md:pr-[50px]">
+    <div className="flex flex-col md:flex-row gap-[20px] min-h-screen md:gap-[48px] p-[24px] md:pr-[50px]">
 
       <ImagesCarousel images={images} />
 
@@ -21,7 +21,7 @@ export default function ProductDetails({ product }) {
 
         <BlackButton className="w-full h-[36px]" buttonText="Add to Cart" />
 
-        <div className="flex flex-col w-full py-[24px] gap-[24px] border-t border-[#1F3044]">
+        <div className="flex flex-col w-full py-[24px] gap-[15px] border-t border-[#1F3044]">
           <h3>Product details</h3>
           <p>{description}</p>
         </div>
