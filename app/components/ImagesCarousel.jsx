@@ -14,12 +14,9 @@ export default function ImagesCarousel({ images }) {
 	return(
 
 		<Swiper
-
-			modules={[Navigation, Pagination]}
 			slidesPerView={1}
 			navigation
 			pagination={{ clickable: true}}
-			scrollbar={{ draggable: true}}
 			>
 			{images.map( (image) => (
 				<SwiperSlide key={image}>

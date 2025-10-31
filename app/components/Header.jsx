@@ -22,6 +22,12 @@ export default function Header(){
           			</a>
         		))}
       		</nav>
+			<button
+          className="text-3xl font-bold underline"
+          onClick={() => alert("Botão clicado!")}
+        >
+          Clique aqui
+        </button>
 
 			<div className="flex gap-[24px]">
 			<i className="ri-search-line h-[24px] w-[24px] text-[#1F3044]"></i>

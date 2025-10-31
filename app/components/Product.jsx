@@ -8,8 +8,8 @@ export default function Product({ product }) {
 			<img 
 			src={product.thumbnail}
 			alt={product.title}
-			className="w-1/2 h-1/2 md:w-[336px] md:h-[336px] lg:border border-gray-300 lg:opacity-10 hover:opacity-100 
-			transition-opacity duration-300 object-scale-down"
+			className="w-1/2 h-1/2 md:w-[336px] md:h-[336px] lg:border lg:bg-black lg:bg-opacity-10 
+			lg:hover:bg-opacity-30 border-gray-300 object-scale-down lg:hover"
 			/>
 			</Link>
 			
