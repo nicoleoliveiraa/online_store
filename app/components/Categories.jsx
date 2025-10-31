@@ -11,7 +11,7 @@ export default function Categories({categories}) {
   }
 
   return (
-    <section className="px-4">
+    <section className="hidden md:block px-4">
       <h4 className="text-inter py-[20px]">Categories</h4>
 
 	  <ul className="space-y-2 w-full max-w-[240px] pb-4">

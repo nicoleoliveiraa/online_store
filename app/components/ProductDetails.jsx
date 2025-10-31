@@ -9,23 +9,15 @@ export default function ProductDetails({ product }) {
   const image = product.thumbnail;
 
   return (
-    <div className="flex gap-[48px] p-[24px]">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-[20px] min-h-screen md:gap-[48px] p-[24px] md:pr-[50px]">
 
       <ImagesCarousel images={images} />
 
-      <div className="flex flex-col w-[400px] p-[24px] gap-[24px]">
+      <div className="flex flex-col w-full md:w-[400px] p-[24px] gap-[24px]">
         <div className="font-ubuntu text-[28px] leading-[32px] font-bold">
           <h1>{title}</h1>
           <h2>${price}</h2>
         </div>
-
-        {/* <button
-          type="button"
-          onClick={() => alert("clicou!")}
-          className="p-4 bg-blue-200"
-        >
-          Teste
-        </button> */}
 
         <BlackButton className="w-full h-[36px]" buttonText="Add to Cart" />
 

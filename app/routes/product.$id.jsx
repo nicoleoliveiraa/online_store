@@ -35,8 +35,6 @@ export default function productId() {
 
 	const product = useLoaderData();
 
-	// console.log(product);
-
 	return (
 		<ProductDetails product={product} />
 	);

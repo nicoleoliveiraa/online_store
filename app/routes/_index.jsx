@@ -36,7 +36,7 @@ export default function Index() {
     return(
       <div className="px-[24px] py-[24px] flex gap-[48px]">
         
-        <div className="flex flex-col w-4/5 gap-[48px]">
+        <div className="flex flex-col w-full md:w-4/5 gap-[20px] md:gap-[48px]">
 
         	<Filter
 				lastProduct={lastProduct}
