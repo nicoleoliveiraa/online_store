@@ -1,4 +1,4 @@
-import ProductDetails from "../components/ProductDetails";
+import ProductDetails from "../components/productDetail/ProductDetails";
 import { useLoaderData } from "@remix-run/react";
 
 export async function loader({ params }) {

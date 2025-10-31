@@ -1,7 +1,7 @@
 import { Links, Meta, Outlet, Scripts } from "@remix-run/react";
 // import stylesheet from "./styles/tailwind.css";
 import Header from "./components/Header";
-// import { StoreProvider } from "./context/StoreContext";
+import { CategoryProvider } from "./context/StoreContext";
 
 
 // export const links = () => [{ rel: "stylesheet", href: stylesheet }];
@@ -22,12 +22,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        {/* <StoreProvider> */}
+        <CategoryProvider>
           <Header />
           <main className="pt-16">
             <Outlet />
           </main>
-        {/* </StoreProvider> */}
+        </CategoryProvider>
 
         <Scripts />
       </body>

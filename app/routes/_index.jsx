@@ -9,14 +9,36 @@ import { json } from "@remix-run/node";
 export async function loader({ request }) {
 
 	const url = new URL(request.url);
+
 	const page = parseInt(url.searchParams.get("page")) || 1;
 	const limit = 9;
 	const skip = (page - 1) * limit;
 
+	const sortBy = url.searchParams.get("sortBy");
+ 	const order = url.searchParams.get("order");
+
+	const category = url.searchParams.get("category");
+
+	let apiUrl = `https://dummyjson.com/products`;
+	
+	if (category) {
+		apiUrl += `/category/${category}`;
+	}
+
+	if (sortBy && order) {
+	  apiUrl += `?sortBy=${sortBy}&order=${order}`;
+	} else {
+		apiUrl += `?`
+	}
+
+	apiUrl += `&limit=${limit}&skip=${skip}`;
+
+	console.log(apiUrl);
+
 	const categoriesRes = await fetch("https://dummyjson.com/products/categories");
 	const categories = await categoriesRes.json();  	
 	
-	const productsRes = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`);
+	const productsRes = await fetch(`${apiUrl}`);
 	const productsData = await productsRes.json();  
 	
 	return json({
@@ -51,7 +73,7 @@ export default function Index() {
         	/>
 
         </div>
-
+	
         <Categories categories={categories} />
       </div>
     );
