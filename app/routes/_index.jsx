@@ -1,8 +1,7 @@
-// import "../styles/styles.css";
-import Filter from "../components/Filter";
-import Categories from "../components/Categories";
-import Products from "../components/Products";
-import Pagination from "../components/Pagination";
+import Filter from "../components/filters/Filter";
+import Categories from "../components/filters/Categories";
+import Products from "../components/homepage/products/Products";
+import Pagination from "../components/homepage/Pagination";
 import { useLoaderData } from "@remix-run/react";
 import { json } from "@remix-run/node";
 
@@ -32,8 +31,6 @@ export async function loader({ request }) {
 	}
 
 	apiUrl += `&limit=${limit}&skip=${skip}`;
-
-	console.log(apiUrl);
 
 	const categoriesRes = await fetch("https://dummyjson.com/products/categories");
 	const categories = await categoriesRes.json();  	

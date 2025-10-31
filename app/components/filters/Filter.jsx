@@ -1,5 +1,5 @@
 import CategoriesMobile from "./CategoriesMobile";
-import SortButton from "./SortButton";
+import SortButton from "../homepage/SortButton";
 
 export default function Filter({lastProduct, totalProducts}) {
 
